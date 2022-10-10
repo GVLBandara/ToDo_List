@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.RegisterFormController">
+   <Label layoutX="59.0" layoutY="19.0" text="Create New Account">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+   <Label layoutX="25.0" layoutY="79.0" text="User Name">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   <TextField fx:id="txtName" layoutX="25.0" layoutY="104.0" onAction="#txtNameOnAction" prefHeight="30.0" prefWidth="200.0">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </TextField>
+   <Label layoutX="25.0" layoutY="142.0" text="E-Mail Address">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   <TextField fx:id="txtEmail" layoutX="25.0" layoutY="167.0" onAction="#txtEmailOnAction" prefHeight="30.0" prefWidth="200.0">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </TextField>
+   <Label layoutX="25.0" layoutY="205.0" text="New Password">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   <PasswordField fx:id="txtPassword" layoutX="25.0" layoutY="230.0" onAction="#txtPasswordOnAction" onKeyTyped="#txtPasswordOnTyped" prefHeight="30.0" prefWidth="200.0">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </PasswordField>
+   <Label layoutX="25.0" layoutY="268.0" text="New Password">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Label>
+   <PasswordField fx:id="txtConfirmPassword" layoutX="25.0" layoutY="293.0" onAction="#txtConfirmPasswordOnAction" onKeyTyped="#txtConfirmPasswordOnTyped" prefHeight="30.0" prefWidth="200.0">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </PasswordField>
+   <Button fx:id="btnRegister" layoutX="25.0" layoutY="342.0" mnemonicParsing="false" onAction="#btnRegisterOnAction" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #00b894;" text="Register" textFill="WHITE">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Button>
+   <Button layoutX="14.0" layoutY="22.0" mnemonicParsing="false" prefHeight="10.0" prefWidth="34.0" style="-fx-background-color: #fab1a0;" text=" ">
+      <font>
+         <Font size="10.0" />
+      </font>
+   </Button>
+   <Label layoutX="13.0" layoutY="2.0" onMouseClicked="#btnBackOnAction" text="←">
+      <font>
+         <Font size="40.0" />
+      </font>
+   </Label>
+   <Label fx:id="lblUid" layoutX="201.0" layoutY="134.0" text="U000">
+      <font>
+         <Font size="10.0" />
+      </font>
+   </Label>
+</AnchorPane>
