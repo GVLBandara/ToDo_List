@@ -13,11 +13,11 @@
       <font>
          <Font size="13.0" />
       </font></Label>
+    <TextField fx:id="txtTask" layoutX="274.0" layoutY="54.0" onAction="#txtTaskOnAction" prefHeight="26.0" prefWidth="318.0" />
     <Label fx:id="lblUserId" layoutX="566.0" layoutY="6.0" text="U001">
       <font>
          <Font size="13.0" />
       </font></Label>
-    <TextField fx:id="txtTask" layoutX="274.0" layoutY="54.0" prefHeight="26.0" prefWidth="318.0" />
     <Button fx:id="btnDelete" layoutX="412.0" layoutY="89.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="26.0" prefWidth="86.0" style="-fx-background-color: #ff4444;" text="Delete">
       <font>
          <Font name="System Bold" size="12.0" />
@@ -26,7 +26,7 @@
       <font>
          <Font name="System Bold" size="12.0" />
       </font></Button>
-    <Button layoutX="275.0" layoutY="156.0" mnemonicParsing="false" onAction="#btnAddNewOnAction" prefHeight="26.0" prefWidth="136.0" style="-fx-background-color: #74b9ff;" text="+ Add New ToDo">
+    <Button fx:id="btnAddNew" layoutX="275.0" layoutY="156.0" mnemonicParsing="false" onAction="#btnAddNewOnAction" prefHeight="26.0" prefWidth="136.0" style="-fx-background-color: #74b9ff;" text="+ Add New ToDo">
       <font>
          <Font name="System Bold" size="12.0" />
       </font></Button>
@@ -43,7 +43,7 @@
           </font>
         </Button>
     </AnchorPane>
-    <Button layoutX="275.0" layoutY="361.0" mnemonicParsing="false" onAction="#btnLogOutOnAction" style="-fx-background-color: #a29bfe;" text="&lt;&lt; Log Out">
+    <Button layoutX="275.0" layoutY="361.0" mnemonicParsing="false" onMouseClicked="#btnLogOutOnClick" style="-fx-background-color: #a29bfe;" text="&lt;&lt; Log Out">
       <font>
          <Font name="System Bold" size="12.0" />
       </font></Button>
