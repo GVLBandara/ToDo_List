@@ -1,14 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Controller.ToDoListFormController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane fx:id="root" prefHeight="400.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ToDoListFormController">
+    <ListView fx:id="lstTasks" layoutX="13.0" layoutY="16.0" prefHeight="368.0" prefWidth="251.0" />
+    <Label fx:id="lblWelcome" layoutX="274.0" layoutY="6.0" prefHeight="19.0" prefWidth="285.0" text="Hi User, Welcome to ToDo List">
+      <font>
+         <Font size="13.0" />
+      </font></Label>
+    <Label fx:id="lblUserId" layoutX="566.0" layoutY="6.0" text="U001">
+      <font>
+         <Font size="13.0" />
+      </font></Label>
+    <TextField fx:id="txtTask" layoutX="274.0" layoutY="54.0" prefHeight="26.0" prefWidth="318.0" />
+    <Button fx:id="btnDelete" layoutX="412.0" layoutY="89.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="26.0" prefWidth="86.0" style="-fx-background-color: #ff4444;" text="Delete">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font></Button>
+    <Button fx:id="btnUpdate" layoutX="507.0" layoutY="89.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="26.0" prefWidth="85.0" style="-fx-background-color: #2ecc71;" text="Update">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font></Button>
+    <Button layoutX="275.0" layoutY="156.0" mnemonicParsing="false" onAction="#btnAddNewOnAction" prefHeight="26.0" prefWidth="136.0" style="-fx-background-color: #74b9ff;" text="+ Add New ToDo">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font></Button>
+    <AnchorPane fx:id="rootAddNew" layoutX="274.0" layoutY="191.0" prefHeight="136.0" prefWidth="318.0">
+        <TextField fx:id="txtNewTask" layoutY="41.0" onAction="#txtNewTaskOnAction" prefHeight="26.0" prefWidth="318.0" />
+        <Label layoutY="14.0" text="Task Name">
+          <font>
+              <Font size="13.0" />
+          </font>
+        </Label>
+        <Button layoutX="183.0" layoutY="74.0" mnemonicParsing="false" onAction="#btnAddToListOnAction" prefHeight="26.0" prefWidth="136.0" style="-fx-background-color: #2ecc71;" text="Add To List">
+          <font>
+              <Font name="System Bold" size="12.0" />
+          </font>
+        </Button>
+    </AnchorPane>
+    <Button layoutX="275.0" layoutY="361.0" mnemonicParsing="false" onAction="#btnLogOutOnAction" style="-fx-background-color: #a29bfe;" text="&lt;&lt; Log Out">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font></Button>
 </AnchorPane>
