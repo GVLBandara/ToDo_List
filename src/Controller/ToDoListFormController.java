@@ -1,7 +1,6 @@
 package Controller;
 
 import Database.DBConnection;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -39,7 +38,7 @@ public class ToDoListFormController {
         loginID = null;
         lblUserId.setText(userID);
         try {
-            ResultSet resultSet = connection.createStatement().executeQuery("select name from user where id = '" + userID + "';");
+            ResultSet resultSet = connection.createStatement().executeQuery("select name from user where user_id = '" + userID + "';");
             resultSet.next();
             lblWelcome.setText("Hi " + resultSet.getString(1).substring(0,1).toUpperCase() + resultSet.getString(1).substring(1) + ", Welcome to ToDo List");
         } catch (SQLException e) {
@@ -47,22 +46,22 @@ public class ToDoListFormController {
         }
     }
 
-    public void btnDeleteOnAction(ActionEvent actionEvent) {
+    public void btnDeleteOnAction() {
     }
 
-    public void btnUpdateOnAction(ActionEvent actionEvent) {
+    public void btnUpdateOnAction() {
     }
 
-    public void btnAddNewOnAction(ActionEvent actionEvent) {
+    public void btnAddNewOnAction() {
     }
 
-    public void txtNewTaskOnAction(ActionEvent actionEvent) {
+    public void txtNewTaskOnAction() {
     }
 
-    public void btnAddToListOnAction(ActionEvent actionEvent) {
+    public void btnAddToListOnAction() {
     }
 
-    public void btnLogOutOnAction(ActionEvent actionEvent) throws IOException {
+    public void btnLogOutOnAction() throws IOException {
         Stage stage = (Stage) root.getScene().getWindow();
         stage.setScene(new Scene(FXMLLoader.load(Objects.requireNonNull(getClass().getResource("../View/LoginForm.fxml")))));
         stage.setTitle("Login");

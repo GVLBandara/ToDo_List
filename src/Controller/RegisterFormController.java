@@ -28,7 +28,7 @@ public class RegisterFormController {
         connection = DBConnection.getDBConnection().getConnection();
 
         Statement statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery("select id from user order by id desc limit 1;");
+        ResultSet resultSet = statement.executeQuery("select user_id from user order by user_id desc limit 1;");
         if(resultSet.next()){
             int id = Integer.parseInt(resultSet.getString(1).substring(1)) +1;
             if(id<10)
@@ -81,7 +81,7 @@ public class RegisterFormController {
             new Alert(Alert.AlertType.WARNING,e.getLocalizedMessage()).showAndWait();
             return;
         }
-        PreparedStatement statement = connection.prepareStatement("insert into user values(? , ? , ? , ?);");
+        PreparedStatement statement = connection.prepareStatement("insert into user values(? , ? , ? , MD5(?));");
         statement.setObject(1,newid);
         statement.setObject(2,txtName.getText());
         statement.setObject(3,txtEmail.getText());

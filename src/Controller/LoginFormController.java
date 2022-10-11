@@ -46,7 +46,7 @@ public class LoginFormController {
 
     public void logIn() throws SQLException, IOException {
         Connection connection = DBConnection.getDBConnection().getConnection();
-        PreparedStatement statement = connection.prepareStatement("select id from user where name = ? and password = ?");
+        PreparedStatement statement = connection.prepareStatement("select user_id from user where name = ? and password = MD5(?)");
         statement.setObject(1,txtName.getText());
         statement.setObject(2,txtPassword.getText());
         ResultSet resultSet = statement.executeQuery();
