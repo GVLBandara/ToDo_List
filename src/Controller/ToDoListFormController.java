@@ -118,6 +118,7 @@ public class ToDoListFormController {
         setDisable(true);
         txtTask.clear();
         txtNewTask.clear();
+        txtNewTask.requestFocus();
     }
 
     public void txtNewTaskOnAction() {
