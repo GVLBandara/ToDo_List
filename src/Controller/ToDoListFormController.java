@@ -54,8 +54,8 @@ public class ToDoListFormController {
             if (task == null) {
                 return;
             }
-            txtTask.setText(task.description());
-            taskID = task.id();
+            txtTask.setText(task.getDescription());
+            taskID = task.getId();
             setDisable(false);
             rootAddNew.setVisible(false);
         });
